@@ -92,9 +92,6 @@ $(KERNEL): $(OBJ)
 %.o: %.S limine.h
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-# Compilation rules for *.asm (nasm) files.
-%.o: %.asm
-	nasm $(NASMFLAGS) $< -o $@
 
 # Remove object files and the final executable.
 .PHONY: clean
